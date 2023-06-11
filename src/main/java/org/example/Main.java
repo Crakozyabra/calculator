@@ -25,7 +25,7 @@ public class Main {
         } else if (split.length != 3) {
             throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один " +
                     "оператор (+, -, /, *), разделенных между друг другом пробелами");
-        } else if (!operators.contains(split[1].trim())) {
+        } else if (!operators.contains(split[1])) {
             throw new Exception("Такая арифметическая операция не предусмотрена");
         }
         boolean firstOperandIsRomans = Pattern.matches(ROMAN_REG_EXP, split[0]);
